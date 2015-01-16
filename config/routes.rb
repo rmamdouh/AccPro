@@ -4,6 +4,8 @@ AccPro::Application.routes.draw do
 
   resources :accounts
 
+  match "/accounts/:id/log" => "accounts#log", :as => 'account_log', :method => 'get'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

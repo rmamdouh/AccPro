@@ -15,6 +15,7 @@
   <%= @account.amount %>
 </p>
 
+<p><%= link_to "View Account Log", "/accounts/#{@account.id}/log", :method => 'get'%></p>
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>
