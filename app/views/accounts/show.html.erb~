@@ -7,7 +7,7 @@
 
 <p>
   <b>Type:</b>
-  <%= @account.accounttype %>
+  <%= @account.type %>
 </p>
 
 <p>
