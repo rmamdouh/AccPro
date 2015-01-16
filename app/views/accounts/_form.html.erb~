@@ -16,8 +16,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
+    <%= f.label :account %><br />
+    <%= f.text_field :accounttype %>
   </div>
   <div class="field">
     <%= f.label :amount %><br />
