@@ -13,13 +13,19 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @transaction = Transaction.new
-    @accounts = Account.all
-    @direction_menu = [["From", "From"], ["To", "To"]]
-    @account_menu = []
-    @accounts.each do |account|
-      @account_menu << [account.name, account.id]
+    if (!params.isblank?)
+      @transaction = Transaction.new
+      @accounts = Account.all
+      @direction_menu = [["From", "From"], ["To", "To"]]
+      @account_menu = []
+      @accounts.each do |account|
+        @account_menu << [account.name, account.id]
+      end
+    elsif
+      @accounts = Account.find_all_by_accounttype(params[:account_type])
+      @selected = params[:account_type]
     end
+
     respond_with(@transaction)
   end
 

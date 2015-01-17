@@ -2,16 +2,26 @@
 
 <p>
   <b>From:</b>
-  <%= @transaction.from %>
+  <%= @transaction.first_direction %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @transaction.first_account_id %>
 </p>
 
 <p>
   <b>To:</b>
-  <%= @transaction.to %>
+  <%= @transaction.second_direction %>
 </p>
 
 <p>
   <b>To:</b>
+  <%= @transaction.second_account_id %>
+</p>
+
+<p>
+  <b>Amount:</b>
   <%= @transaction.amount %>
 </p>
 
