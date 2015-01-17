@@ -1,25 +1,32 @@
+<div id="wrapper">
 <h1>Listing transactions</h1>
 
-<table>
+<table id="keywords" cellspacing="0" cellpadding="0">
   <tr>
-    <th>From</th>
-    <th>To</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><span>To/From</span></th>
+    <th><span>First Account</span></th>
+    <th><span>To/From</span></th>
+    <th><span>Second Account</span></th>
+    <th><span>Amount</span></th>
+    <th><span>Date</span></th>
   </tr>
 
 <% @transactions.each do |transaction| %>
   <tr>
-    <td><%= transaction.from %></td>
-    <td><%= transaction.to %></td>
-    <td><%= link_to 'Show', transaction %></td>
-    <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
-    <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="lalign"><%= transaction.first_direction %></td>
+    <td class="lalign"><%= transaction.first_account_id %></td>
+    <td class="lalign"><%= transaction.second_direction %></td>
+    <td class="lalign"><%= transaction.second_account_id %></td>
+    <td class="lalign"><%= transaction.amount %></td>
+    <td class="lalign"><%= transaction.created_at %></td>
+    <td class="lalign"><%= link_to 'Show', transaction %></td>
+    <td class="lalign"><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+    <td class="lalign"><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+<h2 class="lalign"><%= link_to 'New Transaction', new_transaction_path %></h2>
 
-<%= link_to 'New Transaction', new_transaction_path %>
+</div>
