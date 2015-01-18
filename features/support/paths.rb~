@@ -13,7 +13,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (AccPor )?home\s?page$/ then '/accounts'
+    when /^the (AccPro )?home\s?page$/ then '/accounts'
     when /^the accounts page$/ then '/accounts'
 
     # Add more mappings here.
@@ -21,6 +21,22 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
+
+    when /^the new account page$/
+      begin
+        new_account_path()
+      rescue NoMethodError, ArgumentError
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
+
+    when /^the show page for "(.*)"$/
+      begin
+        show_movie_path(Movie.find_by_title($1))
+      rescue NoMethodError, ArgumentError
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
 
     else
       begin

@@ -22,6 +22,22 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
 
+    when /^the new account page$/
+      begin
+        new_account_path()
+      rescue NoMethodError, ArgumentError
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
+
+    when /^the show page for "(.*)"$/
+      begin
+        show_movie_path(Account.find_by_title($1))
+      rescue NoMethodError, ArgumentError
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
+
     else
       begin
         page_name =~ /^the (.*) page$/

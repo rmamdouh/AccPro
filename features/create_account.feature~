@@ -1,8 +1,8 @@
-Feature: display list of accounts filtered by type
+Feature: create new account from the home page
  
   As a company owner
-  So that I can quickly browse accounts
-  I want to see accounts matching only certain type
+  So that I can quickly create an account
+  I want to see the confirmation maessage on the accounts list page
 
 Background: accounts have been added to database
 
@@ -21,18 +21,15 @@ Background: accounts have been added to database
 
   And I am on the AccPro home page
 
-Scenario: restrict to accounts with Asset type
-  When I select "Asset" from "account_form"
-  And I press "Filter"
-  Then I should see "Cash"
-  Then I should see "Bank"
-  Then I should see "Equipment"
-  Then I should see "Accounts Receivable"
-  Then I should not see "Accounts Payable"
-  Then I should not see "Debt"
-  Then I should not see "Office Expenses"
-  Then I should not see "Project Expenses"
-  Then I should not see "Capital"
-  Then I should not see "Revenue"
+Scenario: create new account
+  When I follow "New Account"
+  Then I should be on the new account page
+  When I fill in the following:
+  | account_name         | Test        |
+  | account_accounttype  | Expense     |
+  | account_amount       | 0           |
+  When I press "Create Account"
+  Then I should be on the AccPro home page
+  Then I should see "Test was successfully created."
 
 

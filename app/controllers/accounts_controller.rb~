@@ -35,8 +35,9 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.create(params[:account])
-    flash[:notice] = "#{@account.title} was successfully created."
+    @account = Account.new(params[:account])
+    @account.save
+    flash[:notice] = "#{@account.name} was successfully created."
     redirect_to accounts_path
   end
 
