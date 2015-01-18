@@ -1,0 +1,10 @@
+<h1>New transaction</h1>
+
+<% if flash[:notice] %>
+<%= notice.message= flash[:notice] %>
+<% elsif flash[:warning] %>
+<%= warning.message= flash[:warning] %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', transactions_path %>

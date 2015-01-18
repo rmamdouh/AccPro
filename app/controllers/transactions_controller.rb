@@ -27,9 +27,34 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(params[:transaction])
-    @transaction.save
-    respond_with(@transaction)
+    @valid = false
+
+    if (params[:transaction][:first_direction] == "From" and 
+        Account.find_by_id(params[:transaction][:first_account_id]).amount.to_i < params[:transaction][:amount].to_i)
+      flash[:warning] = "No enough money in your account."
+      @valid = false
+    end
+
+    if (params[:transaction][:second_direction] == "From" and 
+        Account.find_by_id(params[:transaction][:second_account_id]).amount.to_i < params[:transaction][:amount].to_i)
+      flash[:warning] = "No enough money in your account."
+      @valid = false
+    end
+    
+    @valid = Account.validate_transaction(params[:transaction][:first_account_id], 
+                                          params[:transaction][:first_direction], 
+                                          params[:transaction][:second_account_id], 
+                                          params[:transaction][:second_direction], 
+                                          params[:transaction][:amount])
+    
+    if (@valid == true)
+      @transaction = Transaction.new(params[:transaction])
+      @transaction.save
+      respond_with(@transaction)
+    else
+      flash[:warning] = "Transaction is invalid, please use proper accounts."
+      redirect_to :back
+    end
   end
 
   def update
