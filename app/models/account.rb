@@ -72,7 +72,7 @@ class Account < ActiveRecord::Base
       end
     end
 
-    if ( (@asset - @liability - @equity + @expense) == 0)
+    if ( (@asset + @expense - @liability - @equity) == 0)
       if (account_1_direc == "To")
         Account.find_by_id(account_1).update_attributes(:amount => (amount.to_i + Account.find_by_id(account_1).amount.to_i))
       elsif (account_1_direc == "From")
