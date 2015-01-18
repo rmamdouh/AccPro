@@ -20,7 +20,7 @@ class AccountsController < ApplicationController
   end
 
   def log
-    @transactions = Transaction.where("to = ? OR from = ?", params['id'], params['id'])
+    @transactions = Transaction.where("'to' = ? OR 'from' = ?", params['id'], params['id'])
     if (@transactions != nil)
       @transactions.order("updated_at")
     end
@@ -35,9 +35,9 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.new(params[:account])
-    @account.save
-    respond_with(@account)
+    @account = Account.create(params[:account])
+    flash[:notice] = "#{@account.title} was successfully created."
+    redirect_to accounts_path
   end
 
   def update

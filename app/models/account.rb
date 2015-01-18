@@ -1,3 +1,3 @@
 class Account < ActiveRecord::Base
-  attr_accessible :amount, :name, :accounttype
+  attr_accessible :name, :accounttype, :amount
 end

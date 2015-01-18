@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
@@ -28,7 +29,7 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'rspec-rails'
   gem 'debugger'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
   gem "factory_girl_rails"
   gem 'database_cleaner'
@@ -36,7 +37,6 @@ group :development, :test do
   gem 'launchy'
   gem 'simplecov'
   gem 'faker'
-  gem 'capybara'
 
 end
 
