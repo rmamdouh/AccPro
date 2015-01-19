@@ -20,7 +20,7 @@ class AccountsController < ApplicationController
   end
 
   def log
-    @transactions = Transaction.where("'to' = ? OR 'from' = ?", params['id'], params['id'])
+    @transactions = Transaction.where("'first_account_id' = ? OR 'second_account_id' = ?", params['id'], params['id'])
     if (@transactions != nil)
       @transactions.order("updated_at")
     end

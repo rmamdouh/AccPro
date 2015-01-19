@@ -26,8 +26,8 @@ Scenario: create new account
   Then I should be on the new account page
   When I fill in the following:
   | account_name         | Test        |
-  | account_accounttype  | Expense     |
   | account_amount       | 0           |
+  When I select "Asset" from "account_accounttype"
   When I press "Create Account"
   Then I should be on the AccPro home page
   Then I should see "Test"

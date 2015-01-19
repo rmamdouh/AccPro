@@ -7,6 +7,8 @@ class Account < ActiveRecord::Base
     @liability = 0
     @equity = 0
     @accounts = Account.all
+    @first_account = self.find_by_id(account_1)
+    @second_account = self.find_by_id(account_2)
 
     @accounts.each do |account|
       if (account.accounttype == "Asset")
@@ -20,69 +22,69 @@ class Account < ActiveRecord::Base
       end
     end
 
-    if (self.find_by_id(account_1).accounttype == "Asset")
+    if (@first_account.accounttype == "Asset")
       if (account_1_direc == "To")
-        @asset += self.find_by_id(account_1).amount.to_i
+        @asset += amount.to_i
       elsif (account_1_direc == "From")
-        @asset -= self.find_by_id(account_1).amount.to_i
+        @asset -= amount.to_i
       end
-    elsif (self.find_by_id(account_1).accounttype == "Expense")
+    elsif (@first_account.accounttype == "Expense")
       if (account_1_direc == "To")
-        @expense += self.find_by_id(account_1).amount.to_i
+        @expense += amount.to_i
       elsif (account_1_direc == "From")
-        @expense -= self.find_by_id(account_1).amount.to_i
+        @expense -= amount.to_i
       end
-    elsif (self.find_by_id(account_1).accounttype == "Liability")
+    elsif (@first_account.accounttype == "Liability")
       if (account_1_direc == "To")
-        @liability += self.find_by_id(account_1).amount.to_i
+        @liability += amount.to_i
       elsif (account_1_direc == "From")
-        @liability -= self.find_by_id(account_1).amount.to_i
+        @liability -= amount.to_i
       end
-    elsif (self.find_by_id(account_1).accounttype == "Equity")
+    elsif (@first_account.accounttype == "Equity")
       if (account_1_direc == "To")
-        @equity += self.find_by_id(account_1).amount.to_i
+        @equity += amount.to_i
       elsif (account_1_direc == "From")
-        @equity -= self.find_by_id(account_1).amount.to_i
+        @equity -= amount.to_i
       end
     end
 
-    if (self.find_by_id(account_2).accounttype == "Asset")
+    if (@second_account.accounttype == "Asset")
       if (account_2_direc == "To")
-        @asset += self.find_by_id(account_2).amount.to_i
+        @asset += amount.to_i
       elsif (account_2_direc == "From")
-        @asset -= self.find_by_id(account_2).amount.to_i
+        @asset -= amount.to_i
       end
-    elsif (self.find_by_id(account_2).accounttype == "Expense")
+    elsif (@second_account.accounttype == "Expense")
       if (account_2_direc == "To")
-        @expense += self.find_by_id(account_2).amount.to_i
+        @expense += amount.to_i
       elsif (account_2_direc == "From")
-        @expense -= self.find_by_id(account_2).amount.to_i
+        @expense -= amount.to_i
       end
-    elsif (self.find_by_id(account_2).accounttype == "Liability")
+    elsif (@second_account.accounttype == "Liability")
       if (account_2_direc == "To")
-        @liability += self.find_by_id(account_2).amount.to_i
+        @liability += amount.to_i
       elsif (account_2_direc == "From")
-        @liability -= self.find_by_id(account_2).amount.to_i
+        @liability -= amount.to_i
       end
-    elsif (self.find_by_id(account_2).accounttype == "Equity")
+    elsif (@second_account.accounttype == "Equity")
       if (account_2_direc == "To")
-        @equity += self.find_by_id(account_2).amount.to_i
+        @equity += amount.to_i
       elsif (account_2_direc == "From")
-        @equity -= self.find_by_id(account_2).amount.to_i
+        @equity -= amount.to_i
       end
     end
 
     if ( (@asset + @expense - @liability - @equity) == 0)
       if (account_1_direc == "To")
-        Account.find_by_id(account_1).update_attributes(:amount => (amount.to_i + Account.find_by_id(account_1).amount.to_i))
+        Account.find_by_id(account_1).update_attributes(:amount => (amount.to_i + @first_account.amount.to_i))
       elsif (account_1_direc == "From")
-        Account.find_by_id(account_1).update_attributes(:amount => (Account.find_by_id(account_1).amount.to_i - amount.to_i))
+        Account.find_by_id(account_1).update_attributes(:amount => (@first_account.amount.to_i - amount.to_i))
       end
 
       if (account_2_direc == "To")
-        Account.find_by_id(account_2).update_attributes(:amount => (amount.to_i + Account.find_by_id(account_2).amount.to_i))
+        Account.find_by_id(account_2).update_attributes(:amount => (amount.to_i + @second_account.amount.to_i))
       elsif (account_2_direc == "From")
-        Account.find_by_id(account_2).update_attributes(:amount => (Account.find_by_id(account_2).amount.to_i - amount.to_i))
+        Account.find_by_id(account_2).update_attributes(:amount => (@second_account.amount.to_i - amount.to_i))
       end
 
       return true

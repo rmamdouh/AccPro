@@ -1,56 +1,44 @@
 source 'https://rubygems.org'
 
 ruby '1.9.3'
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.18'
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'devise'
-gem 'cancan'
-
-
+# for Heroku deployment - as described in Ap. A of ELLS book
+group :development, :test do
+  gem 'sqlite3'
+  gem 'debugger'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'simplecov'
+  gem "factory_girl_rails"
+end
+group :production do
+  gem 'pg'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'debugger'
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels'
-  gem "factory_girl_rails"
-  gem 'database_cleaner'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'simplecov'
-  gem 'faker'
-
-end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
+# Use unicorn as the web server
 # gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'haml'
