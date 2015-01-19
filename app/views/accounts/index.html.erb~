@@ -1,16 +1,16 @@
 
 <div id="wrapper">
-<h1><%= link_to 'Listing Accounts', accounts_path %></h1>
+<h1><%= link_to 'Balance Sheet', accounts_path %></h1>
 
 <table id="keywords" cellspacing="0" cellpadding="0">
 
-  <tr><span>
+  <tr>
     <%= form_tag accounts_path, :id => "types_form", :method => :get do %>
       <%= label_tag(:t, "Filter accounts by Type") %>
       <%= select_tag(:account_type, options_for_select(@account_types, @selected)) %>
       <%= submit_tag("Filter") %>
     <% end %>
-  </span></tr>
+  </tr>
 
   <tr>
     <th><span>Name</span></th>

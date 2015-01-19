@@ -27,6 +27,7 @@ class AccountsController < ApplicationController
   end
 
   def new
+    @account_types = [["Asset", "Asset"], ["Liability", "Liability"], ["Expense", "Expense"], ["Equity", "Equity"]]
     @account = Account.new
     respond_with(@account)
   end

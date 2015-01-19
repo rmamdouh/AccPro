@@ -9,13 +9,11 @@
 </head>
 <body>
 
-<% if flash[:notice] %>
-<%= notice.message= flash[:notice] %>
-<% elsif flash[:warning] %>
-<%= warning.message= flash[:warning] %>
-<% end %>
+    <main role="main">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </main>
 
-<%= yield %>
 
 </body>
 </html>

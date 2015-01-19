@@ -17,8 +17,9 @@
   </div>
   <div class="field">
     <%= f.label :type %><br />
-    <%= f.text_field :accounttype %>
+    <%= f.select :accounttype, options_for_select(@account_types) %>
   </div>
+
   <div class="field">
     <%= f.label :amount %><br />
     <%= f.number_field :amount %>
