@@ -57,7 +57,7 @@ Scenario: create and view the created transaction from Bank to Project Expenses
   Then I should be on the transactions page
   Then I should see all the transactions
   Then I should see transaction "Capital" before "Project Expenses"
-  Then I should see "500" before "100"
+  Then I should see amount "500" before "100"
   Then I should not see "Debt"
   Then I should not see "Revenue"
   Then I should not see "Accounts Receivable"

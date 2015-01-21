@@ -33,6 +33,8 @@ class AccountsController < ApplicationController
   end
 
   def edit
+    @account_types = [["Asset", "Asset"], ["Liability", "Liability"], ["Expense", "Expense"], ["Equity", "Equity"]]
+    @account = Account.find_by_id(params[:id])
   end
 
   def create

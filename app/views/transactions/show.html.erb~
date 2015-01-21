@@ -1,19 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b><%= @transaction.first_direction %>:<b>
+  <b><%= @transaction.first_direction %>: <b><%= @transaction.first_account_id %>
 </p>
 
 <p>
-  <%= @transaction.first_account_id %>
-</p>
-
-<p>
-  <b><%= @transaction.second_direction %>:<b>
-</p>
-
-<p>
-  <%= @transaction.second_account_id %>
+  <b><%= @transaction.second_direction %>: <b><%= @transaction.second_account_id %>
 </p>
 
 <p>

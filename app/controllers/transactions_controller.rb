@@ -24,6 +24,14 @@ class TransactionsController < ApplicationController
   end
 
   def edit
+    @transaction = Transaction.find_by_id(params[:id])
+    @accounts = Account.all
+    @direction_menu = [["From", "From"], ["To", "To"]]
+    @account_menu = []
+    @accounts.each do |account|
+      @account_menu << [account.name, account.id]
+    end
+    respond_with(@transaction)
   end
 
   def create
@@ -33,24 +41,25 @@ class TransactionsController < ApplicationController
         (Account.find_by_id(params[:transaction][:first_account_id]).amount.to_i < params[:transaction][:amount].to_i) ) or
         ((params[:transaction][:second_direction] == "From") and 
         (Account.find_by_id(params[:transaction][:second_account_id]).amount.to_i < params[:transaction][:amount].to_i)) )
-      flash[:warning] = "No enough money in your account."
-      @valid = false
-    end
-
-    @valid = Account.validate_transaction(params[:transaction][:first_account_id], 
+      flash[:notice] = "No enough money in your account."
+      redirect_to :back
+    else
+      @valid = Account.validate_transaction(params[:transaction][:first_account_id], 
                                           params[:transaction][:first_direction], 
                                           params[:transaction][:second_account_id], 
                                           params[:transaction][:second_direction], 
                                           params[:transaction][:amount])
-    
     if (@valid == true)
       @transaction = Transaction.new(params[:transaction])
       @transaction.save
       redirect_to transactions_path
     else
-      flash[:warning] = "Transaction is invalid, please use proper accounts."
+      flash[:notice] = "Transaction is invalid, please use proper accounts."
       redirect_to :back
     end
+
+    end
+    
   end
 
   def update
