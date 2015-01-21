@@ -46,7 +46,7 @@ class TransactionsController < ApplicationController
     if (@valid == true)
       @transaction = Transaction.new(params[:transaction])
       @transaction.save
-      respond_with(@transaction)
+      redirect_to transactions_path
     else
       flash[:warning] = "Transaction is invalid, please use proper accounts."
       redirect_to :back
