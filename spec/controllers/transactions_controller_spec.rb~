@@ -85,18 +85,12 @@ RSpec.describe TransactionsController, :type => :controller do
       end
 
       it "assigns a newly created transaction as @transaction" do
-        account_double = double('Account')
-        account_double.stub(:validate_transaction).and_return(true)
-        Account.should_receive(:validate_transaction).and_return(true)
         post :create, {:transaction => valid_attributes}, valid_session
         expect(assigns(:transaction)).to be_a(Transaction)
         expect(assigns(:transaction)).to be_persisted
       end
 
       it "redirects to the created transaction" do
-        account_double = double('Account')
-        account_double.stub(:validate_transaction).and_return(true)
-        Account.should_receive(:validate_transaction).and_return(true)
         post :create, {:transaction => valid_attributes}, valid_session
         expect(response).to redirect_to(Transaction)
       end

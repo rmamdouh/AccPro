@@ -1,5 +1,7 @@
 class Account < ActiveRecord::Base
   attr_accessible :name, :accounttype, :amount
+  validates :name, :presence => true, :uniqueness => true, format: { with: /\A[a-zA-Z ]+\z/, message: "only allows letters, spaces" }
+  validates :amount, :presence => true, numericality: { only_integer: true }
 
   def self.validate_transaction(account_1, account_1_direc, account_2, account_2_direc, amount)
     @asset = 0

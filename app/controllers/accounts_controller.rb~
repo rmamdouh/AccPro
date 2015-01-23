@@ -33,14 +33,20 @@ class AccountsController < ApplicationController
   end
 
   def edit
+    @account_types = [["Asset", "Asset"], ["Liability", "Liability"], ["Expense", "Expense"], ["Equity", "Equity"]]
     @account = Account.find_by_id(params[:id])
   end
 
   def create
     @account = Account.new(params[:account])
-    @account.save
-    flash[:notice] = "#{@account.name} was successfully created."
-    redirect_to accounts_path
+
+    if @account.valid?
+      @account.save
+      flash[:notice] = "#{@account.name} was successfully created."
+      redirect_to accounts_path and return
+    else
+      redirect_to :back
+    end
   end
 
   def update

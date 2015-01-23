@@ -19,13 +19,6 @@ class AccountsController < ApplicationController
     respond_with(@account)
   end
 
-  def log
-    @transactions = Transaction.where("'first_account_id' = ? OR 'second_account_id' = ?", params['id'], params['id'])
-    if (@transactions != nil)
-      @transactions.order("updated_at")
-    end
-  end
-
   def new
     @account_types = [["Asset", "Asset"], ["Liability", "Liability"], ["Expense", "Expense"], ["Equity", "Equity"]]
     @account = Account.new
@@ -39,9 +32,14 @@ class AccountsController < ApplicationController
 
   def create
     @account = Account.new(params[:account])
-    @account.save
-    flash[:notice] = "#{@account.name} was successfully created."
-    redirect_to accounts_path
+
+    if @account.valid?
+      @account.save
+      flash[:notice] = "#{@account.name} was successfully created."
+      redirect_to accounts_path and return
+    else
+      redirect_to :back
+    end
   end
 
   def update
