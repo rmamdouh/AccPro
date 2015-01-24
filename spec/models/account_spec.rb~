@@ -34,7 +34,7 @@ RSpec.describe Account, :type => :model do
       account1 = FactoryGirl.create(:account, :name => "First", :accounttype => "Asset", :amount => 100)
       account2 = FactoryGirl.create(:account, :name => "Second", :accounttype => "Liability", :amount => 100)
 
-      Account.validate_transaction(account1.id, "From", account2.id, "From", 100).should eq(true)
+      Account.validate_transaction(account1.id, "To", account2.id, "To", 100).should eq(true)
     end
 
     it 'invalid add to Expense and Asset!' do
