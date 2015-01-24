@@ -21,7 +21,7 @@ require 'rails_helper'
 RSpec.describe TransactionsController, :type => :controller do
 
   before(:each) do
-    request.env["HTTP_REFERER"] = "where_i_came_from"
+    request.env["HTTP_REFERER"] = "http://test.hostwhere_i_came_from"
   end
 
   # This should return the minimal set of attributes required to create a valid
@@ -100,6 +100,28 @@ RSpec.describe TransactionsController, :type => :controller do
         post :create, {:transaction => valid_attributes}, valid_session
         expect(response).to redirect_to(Transaction)
       end
+
+      it "redirects to the form to try again" do
+        account_double = double('Account')
+        account_double.stub(:validate_transaction).and_return(false)
+        Account.should_receive(:validate_transaction).and_return(false)
+        post :create, {:transaction => valid_attributes}, valid_session
+        expect(response).to redirect_to(:back)
+      end
+
+      it "redirects to the form to try again as account amount is not sufficient" do
+        account_double1 = double('Asset')
+        account_double1.stub(:id).and_return(1)
+        account_double1.stub(:amount).and_return("100")
+        account_double2 = double('Equity')
+        account_double2.stub(:id).and_return(1)
+        account_double2.stub(:amount).and_return(2)
+        Account.should_receive("find_by_id").and_return(account_double1)
+        #Account.should_receive(:find_by_id).and_return(account_double2)
+        post :create, {:transaction => {:first_direction => "From", :first_account_id => account_double1.id, :second_direction => "To", :second_account_id => account_double2.id, :amount => 1000}}
+        expect(response).to redirect_to(:back)
+      end
+
     end
 
   end
