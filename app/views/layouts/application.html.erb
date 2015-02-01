@@ -9,7 +9,41 @@
 </head>
 <body>
 
-<%= yield %>
+    <!-- Navigation -->
+
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+		    <li>
+                        <%= link_to "Home", accounts_path, :method => 'get' %> 
+                    </li>
+		    <li>
+                        <%= link_to "Balance Sheet", accounts_path, :method => 'get' %> 
+                    </li>
+		    <li>
+                        <%= link_to "Transactions", transactions_path, :method => 'get' %> 
+                    </li>
+                    <li>
+                        <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+
+<br />
+<br />
+
+    <div class="container">
+        <% if notice%>
+       <p class="alert alert-info"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+       <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+	<%= yield %>
+    </div>
 
 </body>
 </html>
