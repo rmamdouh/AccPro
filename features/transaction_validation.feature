@@ -22,6 +22,14 @@ Background: accounts have been added to database
   And I am on the AccPro home page
 
 Scenario: create a valid transaction to both Bank and Capital
+  Given a valid admin
+  When I go to the login page
+  And I fill in the following:
+    |Email|admin@admin.com|
+    |Password|12345678|
+  And I press "Log in"
+  Then I should see "Signed in successfully."
+
   When I follow "New Transaction"
   Then I should be on the new transaction page
   When I select "To" from "transaction_first_direction"
@@ -33,6 +41,14 @@ Scenario: create a valid transaction to both Bank and Capital
   Then I should be on the transactions page
 
 Scenario: try an invalid transaction from Bank to Capital
+  Given a valid admin
+  When I go to the login page
+  And I fill in the following:
+    |Email|admin@admin.com|
+    |Password|12345678|
+  And I press "Log in"
+  Then I should see "Signed in successfully."
+
   When I follow "New Transaction"
   Then I should be on the new transaction page
   When I select "To" from "transaction_first_direction"
@@ -55,6 +71,14 @@ Scenario: try an invalid transaction from Bank to Capital
   Then I should see "Transaction is invalid, please use proper accounts."
 
 Scenario: make a mix of valid and invalid transactions
+  Given a valid admin
+  When I go to the login page
+  And I fill in the following:
+    |Email|admin@admin.com|
+    |Password|12345678|
+  And I press "Log in"
+  Then I should see "Signed in successfully."
+
   When I follow "New Transaction"
   Then I should be on the new transaction page
   When I select "To" from "transaction_first_direction"

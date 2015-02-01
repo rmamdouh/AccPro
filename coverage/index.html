@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.8.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.8.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.8.0/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.8.0/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.8.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-01-24T19:06:24-04:00">2015-01-24T19:06:24-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-01T18:50:46-04:00">2015-02-01T18:50:46-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.41%</span></span>
+    (<span class="covered_percent"><span class="red">27.93%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         2.99
+       <span class="red">
+         0.4
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>8</b> files in total.
-    <b>161</b> relevant lines. 
-    <span class="green"><b>152</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed </span>
+    <b>11</b> files in total.
+    <b>179</b> relevant lines. 
+    <span class="green"><b>50</b> lines covered</span> and
+    <span class="red"><b>129</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,32 +52,42 @@
       
       <tr>
         <td class="strong"><a href="#a1d5549d87a7e1604b12fd0797ce84c603b8082e" class="src_link" title="app/controllers/accounts_controller.rb">app/controllers/accounts_controller.rb</a></td>
-        <td class="green strong">97.06 %</td>
-        <td>59</td>
-        <td>34</td>
-        <td>33</td>
-        <td>1</td>
-        <td>1.9</td>
+        <td class="red strong">37.14 %</td>
+        <td>60</td>
+        <td>35</td>
+        <td>13</td>
+        <td>22</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#6abb4c33007b7051cdbf4367b43fb3aaa34ef0fc" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="red strong">80.0 %</td>
+        <td>8</td>
+        <td>5</td>
+        <td>4</td>
+        <td>1</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#586f8be7cc5907ba7da8322e5a89adab2dadaeaa" class="src_link" title="app/controllers/transactions_controller.rb">app/controllers/transactions_controller.rb</a></td>
-        <td class="green strong">95.83 %</td>
-        <td>79</td>
-        <td>48</td>
-        <td>46</td>
+        <td class="red strong">26.53 %</td>
+        <td>80</td>
+        <td>49</td>
+        <td>13</td>
+        <td>36</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#2a7cffc104321b26018977bce66cb07c1a4bd5d5" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
+        <td class="red strong">66.67 %</td>
+        <td>7</td>
+        <td>3</td>
         <td>2</td>
-        <td>1.8</td>
+        <td>1</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
@@ -111,13 +121,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#8bbcbaafa5226d0e6c4aecacfdfa763c4b895db4" class="src_link" title="app/models/ability.rb">app/models/ability.rb</a></td>
+        <td class="red strong">71.43 %</td>
+        <td>32</td>
+        <td>7</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#8c71de6fae8f649d247331d6b1fed11dd0efa5c1" class="src_link" title="app/models/account.rb">app/models/account.rb</a></td>
-        <td class="green strong">91.67 %</td>
+        <td class="red strong">6.94 %</td>
         <td>98</td>
         <td>72</td>
-        <td>66</td>
-        <td>6</td>
-        <td>4.5</td>
+        <td>5</td>
+        <td>67</td>
+        <td>0.1</td>
       </tr>
       
       <tr>
@@ -126,6 +146,16 @@
         <td>3</td>
         <td>2</td>
         <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#392315b72d4e9ddb15a00fe44ac7e12b7a553a74" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>10</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -139,20 +169,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="green">96.43%</span></span>
+    (<span class="covered_percent"><span class="red">34.78%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.82
+       <span class="red">
+         0.38
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>3</b> files in total.
-    <b>84</b> relevant lines. 
-    <span class="green"><b>81</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed </span>
+    <b>4</b> files in total.
+    <b>92</b> relevant lines. 
+    <span class="green"><b>32</b> lines covered</span> and
+    <span class="red"><b>60</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -170,32 +200,42 @@
       
       <tr>
         <td class="strong"><a href="#a1d5549d87a7e1604b12fd0797ce84c603b8082e" class="src_link" title="app/controllers/accounts_controller.rb">app/controllers/accounts_controller.rb</a></td>
-        <td class="green strong">97.06 %</td>
-        <td>59</td>
-        <td>34</td>
-        <td>33</td>
-        <td>1</td>
-        <td>1.9</td>
+        <td class="red strong">37.14 %</td>
+        <td>60</td>
+        <td>35</td>
+        <td>13</td>
+        <td>22</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#6abb4c33007b7051cdbf4367b43fb3aaa34ef0fc" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="red strong">80.0 %</td>
+        <td>8</td>
+        <td>5</td>
+        <td>4</td>
+        <td>1</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#586f8be7cc5907ba7da8322e5a89adab2dadaeaa" class="src_link" title="app/controllers/transactions_controller.rb">app/controllers/transactions_controller.rb</a></td>
-        <td class="green strong">95.83 %</td>
-        <td>79</td>
-        <td>48</td>
-        <td>46</td>
+        <td class="red strong">26.53 %</td>
+        <td>80</td>
+        <td>49</td>
+        <td>13</td>
+        <td>36</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#2a7cffc104321b26018977bce66cb07c1a4bd5d5" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
+        <td class="red strong">66.67 %</td>
+        <td>7</td>
+        <td>3</td>
         <td>2</td>
-        <td>1.8</td>
+        <td>1</td>
+        <td>0.7</td>
       </tr>
       
     </tbody>
@@ -206,20 +246,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="green">91.89%</span></span>
+    (<span class="covered_percent"><span class="red">17.86%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         4.41
+       <span class="red">
+         0.4
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
-    <b>2</b> files in total.
-    <b>74</b> relevant lines. 
-    <span class="green"><b>68</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed </span>
+    <b>4</b> files in total.
+    <b>84</b> relevant lines. 
+    <span class="green"><b>15</b> lines covered</span> and
+    <span class="red"><b>69</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -236,13 +276,23 @@
     <tbody>
       
       <tr>
+        <td class="strong"><a href="#8bbcbaafa5226d0e6c4aecacfdfa763c4b895db4" class="src_link" title="app/models/ability.rb">app/models/ability.rb</a></td>
+        <td class="red strong">71.43 %</td>
+        <td>32</td>
+        <td>7</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#8c71de6fae8f649d247331d6b1fed11dd0efa5c1" class="src_link" title="app/models/account.rb">app/models/account.rb</a></td>
-        <td class="green strong">91.67 %</td>
+        <td class="red strong">6.94 %</td>
         <td>98</td>
         <td>72</td>
-        <td>66</td>
-        <td>6</td>
-        <td>4.5</td>
+        <td>5</td>
+        <td>67</td>
+        <td>0.1</td>
       </tr>
       
       <tr>
@@ -251,6 +301,16 @@
         <td>3</td>
         <td>2</td>
         <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#392315b72d4e9ddb15a00fe44ac7e12b7a553a74" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>10</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -414,11 +474,11 @@
         <div class="source_table" id="a1d5549d87a7e1604b12fd0797ce84c603b8082e">
   <div class="header">
     <h3>app/controllers/accounts_controller.rb</h3>
-    <h4><span class="green">97.06 %</span> covered</h4>
+    <h4><span class="red">37.14 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>35</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
+      <span class="red"><b>22</b> lines missed.</span>
     </div>
   </div>
   
@@ -434,346 +494,352 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
+          <code class="ruby">  load_and_authorize_resource</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
           <code class="ruby">  before_filter :set_account, only: [:show, :edit, :update, :destroy]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  respond_to :html</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def index</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
           <code class="ruby">    @account_types = [[&quot;Asset&quot;, &quot;Asset&quot;], [&quot;Liability&quot;, &quot;Liability&quot;], [&quot;Expense&quot;, &quot;Expense&quot;], [&quot;Equity&quot;, &quot;Equity&quot;]]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
           
           <code class="ruby">    if (params[:account_type] == nil or params[:account_type] == &quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
           
           <code class="ruby">      @accounts = Account.all</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">    elsif</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
+          <code class="ruby">    elsif</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
           <code class="ruby">      @accounts = Account.find_all_by_accounttype(params[:account_type])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
           <code class="ruby">      @selected = params[:account_type]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
           
           <code class="ruby">    respond_with(@accounts)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="18">
           
-          <code class="ruby">  def show</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    respond_with(@account)</code>
+          <code class="ruby">  def show</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    respond_with(@account)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="22">
           
-          <code class="ruby">  def new</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
+          <code class="ruby">  def new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
+          
           <code class="ruby">    @account_types = [[&quot;Asset&quot;, &quot;Asset&quot;], [&quot;Liability&quot;, &quot;Liability&quot;], [&quot;Expense&quot;, &quot;Expense&quot;], [&quot;Equity&quot;, &quot;Equity&quot;]]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
           
           <code class="ruby">    @account = Account.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
           
           <code class="ruby">    respond_with(@account)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="28">
           
-          <code class="ruby">  def edit</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
+          <code class="ruby">  def edit</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
           <code class="ruby">    @account_types = [[&quot;Asset&quot;, &quot;Asset&quot;], [&quot;Liability&quot;, &quot;Liability&quot;], [&quot;Expense&quot;, &quot;Expense&quot;], [&quot;Equity&quot;, &quot;Equity&quot;]]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
           
           <code class="ruby">    @account = Account.find_by_id(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="34">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
           
           <code class="ruby">    @account = Account.new(params[:account])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="36">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
           
           <code class="ruby">    if @account.valid?</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="37">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
           
           <code class="ruby">      @account.save</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="38">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
           
           <code class="ruby">      flash[:notice] = &quot;#{@account.name} was successfully created.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="39">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
           
           <code class="ruby">      redirect_to accounts_path and return</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
           
           <code class="ruby">      redirect_to :back</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="46">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
           
           <code class="ruby">    @account.update_attributes(params[:account])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="47">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">    respond_with(@account)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
           
           <code class="ruby">    @account.destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="52">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
           
           <code class="ruby">    respond_with(@account)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="55">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
           <code class="ruby">    def set_account</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="57">
-          <span class="hits">9</span>
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
           
           <code class="ruby">      @account = Account.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>
@@ -786,11 +852,11 @@
         <div class="source_table" id="6abb4c33007b7051cdbf4367b43fb3aaa34ef0fc">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">80.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -806,10 +872,40 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
+          <code class="ruby">  before_filter :authenticate_user!</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
           <code class="ruby">  protect_from_forgery</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  rescue_from CanCan::AccessDenied do |exception|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">    redirect_to :back, :alert =&gt; exception.message</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -822,11 +918,11 @@
         <div class="source_table" id="586f8be7cc5907ba7da8322e5a89adab2dadaeaa">
   <div class="header">
     <h3>app/controllers/transactions_controller.rb</h3>
-    <h4><span class="green">95.83 %</span> covered</h4>
+    <h4><span class="red">26.53 %</span> covered</h4>
     <div>
-      <b>48</b> relevant lines. 
-      <span class="green"><b>46</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>49</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
+      <span class="red"><b>36</b> lines missed.</span>
     </div>
   </div>
   
@@ -842,466 +938,532 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
+          <code class="ruby">  load_and_authorize_resource</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
           <code class="ruby">  before_filter :set_transaction, only: [:show, :edit, :update, :destroy]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  respond_to :html</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def index</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
           <code class="ruby">    @transactions = Transaction.all</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
           
           <code class="ruby">    respond_with(@transactions)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="11">
           
-          <code class="ruby">  def show</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    respond_with(@transaction)</code>
+          <code class="ruby">  def show</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    respond_with(@transaction)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">  def new</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
+          <code class="ruby">  def new</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
           <code class="ruby">    @transaction = Transaction.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">    @accounts = Account.all</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">    @direction_menu = [[&quot;From&quot;, &quot;From&quot;], [&quot;To&quot;, &quot;To&quot;]]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
           
           <code class="ruby">    @account_menu = []</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @accounts.each do |account|</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
           
           
+          <code class="ruby">    @accounts.each do |account|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
           <code class="ruby">      @account_menu &lt;&lt; [account.name, account.id]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
           
           <code class="ruby">    respond_with(@transaction)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">  def edit</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
+          <code class="ruby">  def edit</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
           <code class="ruby">    @transaction = Transaction.find_by_id(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
           
           <code class="ruby">    @accounts = Account.all</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
           
           <code class="ruby">    @direction_menu = [[&quot;From&quot;, &quot;From&quot;], [&quot;To&quot;, &quot;To&quot;]]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
           
           <code class="ruby">    @account_menu = []</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @accounts.each do |account|</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="32">
           
           
+          <code class="ruby">    @accounts.each do |account|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
           <code class="ruby">      @account_menu &lt;&lt; [account.name, account.id]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
           
           <code class="ruby">    respond_with(@transaction)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="38">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
           
           <code class="ruby">    @valid = false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="40">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="41">
+          
           
           <code class="ruby">    if ( ( (params[:transaction][:first_direction] == &quot;From&quot;) and </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
           
           <code class="ruby">        (Account.find_by_id(params[:transaction][:first_account_id]).amount.to_i &lt; params[:transaction][:amount].to_i) ) or</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="42">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="43">
+          
           
           <code class="ruby">        ((params[:transaction][:second_direction] == &quot;From&quot;) and </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="43">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
           
           <code class="ruby">        (Account.find_by_id(params[:transaction][:second_account_id]).amount.to_i &lt; params[:transaction][:amount].to_i)) )</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
           
           <code class="ruby">      flash[:notice] = &quot;No enough money in your account.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
           
           <code class="ruby">      redirect_to :back</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="47">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">      @valid = Account.validate_transaction(params[:transaction][:first_account_id], </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">                                          params[:transaction][:first_direction], </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">                                          params[:transaction][:second_account_id], </code>
+          <code class="ruby">                                          params[:transaction][:first_direction], </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">                                          params[:transaction][:second_direction], </code>
+          <code class="ruby">                                          params[:transaction][:second_account_id], </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
+          <code class="ruby">                                          params[:transaction][:second_direction], </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
           <code class="ruby">                                          params[:transaction][:amount])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="52">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
           
           <code class="ruby">    if (@valid == true)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="53">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="54">
+          
           
           <code class="ruby">      @transaction = Transaction.new(params[:transaction])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="54">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="55">
+          
           
           <code class="ruby">      @transaction.save</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="55">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="56">
+          
           
           <code class="ruby">      redirect_to transactions_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
           
           <code class="ruby">      flash[:notice] = &quot;Transaction is invalid, please use proper accounts.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="59">
+          
           
           <code class="ruby">      redirect_to :back</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="66">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="67">
+          
           
           <code class="ruby">    @transaction.update_attributes(params[:transaction])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="67">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
           
           <code class="ruby">    respond_with(@transaction)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="68">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="71">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
           
           <code class="ruby">    @transaction.destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="72">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="73">
+          
           
           <code class="ruby">    respond_with(@transaction)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="73">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="75">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
           <code class="ruby">    def set_transaction</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="77">
-          <span class="hits">7</span>
+        <li class="missed" data-hits="0" data-linenumber="78">
+          
           
           <code class="ruby">      @transaction = Transaction.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="2a7cffc104321b26018977bce66cb07c1a4bd5d5">
+  <div class="header">
+    <h3>app/controllers/users_controller.rb</h3>
+    <h4><span class="red">66.67 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class UsersController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    @users = User.all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -1401,14 +1563,224 @@
   </pre>
 </div>
       
+        <div class="source_table" id="8bbcbaafa5226d0e6c4aecacfdfa763c4b895db4">
+  <div class="header">
+    <h3>app/models/ability.rb</h3>
+    <h4><span class="red">71.43 %</span> covered</h4>
+    <div>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Ability</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include CanCan::Ability</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">    # Define abilities for the passed in user here. For example:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="7">
+          <span class="hits">9</span>
+          
+          <code class="ruby">       user ||= User.new # guest user (not logged in)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="8">
+          <span class="hits">9</span>
+          
+          <code class="ruby">       if user.admin?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">         can :manage, :all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">       else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">         can :read, :all</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">       end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    # The first argument to `can` is the action you are giving the user </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    # permission to do.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    # If you pass :manage it will apply to every action. Other common actions</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    # here are :read, :create, :update and :destroy.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    # The second argument is the resource the user can perform the action on. </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    # If you pass :all it will apply to every resource. Otherwise pass a Ruby</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">    # class of the resource.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    # The third argument is an optional hash of conditions to further filter the</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    # objects.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    # For example, here the user can only update published articles.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">    #   can :update, Article, :published =&gt; true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">    #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    # See the wiki for details:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    # https://github.com/ryanb/cancan/wiki/Defining-Abilities</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="8c71de6fae8f649d247331d6b1fed11dd0efa5c1">
   <div class="header">
     <h3>app/models/account.rb</h3>
-    <h4><span class="green">91.67 %</span> covered</h4>
+    <h4><span class="red">6.94 %</span> covered</h4>
     <div>
       <b>72</b> relevant lines. 
-      <span class="green"><b>66</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>67</b> lines missed.</span>
     </div>
   </div>
   
@@ -1451,44 +1823,44 @@
           <code class="ruby">  def self.validate_transaction(account_1, account_1_direc, account_2, account_2_direc, amount)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="7">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
           
           <code class="ruby">    @asset = 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="8">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
           
           <code class="ruby">    @expense = 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="9">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
           
           <code class="ruby">    @liability = 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="10">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
           
           <code class="ruby">    @equity = 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="11">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
           
           <code class="ruby">    @accounts = Account.all</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="12">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
           
           <code class="ruby">    @first_account = self.find_by_id(account_1)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="13">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
           
           <code class="ruby">    @second_account = self.find_by_id(account_2)</code>
         </li>
@@ -1499,56 +1871,56 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="15">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
           
           <code class="ruby">    @accounts.each do |account|</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="16">
-          <span class="hits">22</span>
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
           
           <code class="ruby">      if (account.accounttype == &quot;Asset&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="17">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
           
           <code class="ruby">        @asset += account.amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="18">
-          <span class="hits">14</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">      elsif (account.accounttype == &quot;Expense&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="19">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">        @expense += account.amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="20">
-          <span class="hits">9</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
           
           <code class="ruby">      elsif (account.accounttype == &quot;Liability&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="21">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
           
           <code class="ruby">        @liability += account.amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
           
           <code class="ruby">      elsif (account.accounttype == &quot;Equity&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="23">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
           
           <code class="ruby">        @equity += account.amount.to_i</code>
         </li>
@@ -1571,32 +1943,32 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="27">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
           
           <code class="ruby">    if (@first_account.accounttype == &quot;Asset&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="28">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
           
           <code class="ruby">      if (account_1_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="29">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
           
           <code class="ruby">        @asset += amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
           
           <code class="ruby">      elsif (account_1_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="31">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
           
           <code class="ruby">        @asset -= amount.to_i</code>
         </li>
@@ -1607,20 +1979,20 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="33">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
           
           <code class="ruby">    elsif (@first_account.accounttype == &quot;Expense&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
           
           <code class="ruby">      if (account_1_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="35">
+          
           
           <code class="ruby">        @expense += amount.to_i</code>
         </li>
@@ -1643,32 +2015,32 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="39">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
           
           <code class="ruby">    elsif (@first_account.accounttype == &quot;Liability&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="40">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
           
           <code class="ruby">      if (account_1_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="41">
+          
           
           <code class="ruby">        @liability += amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
           
           <code class="ruby">      elsif (account_1_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="43">
+          
           
           <code class="ruby">        @liability -= amount.to_i</code>
         </li>
@@ -1679,32 +2051,32 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="45">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
           
           <code class="ruby">    elsif (@first_account.accounttype == &quot;Equity&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="46">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
           
           <code class="ruby">      if (account_1_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
           
           <code class="ruby">        @equity += amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="48">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">      elsif (account_1_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="49">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
           
           <code class="ruby">        @equity -= amount.to_i</code>
         </li>
@@ -1727,20 +2099,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="53">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
           
           <code class="ruby">    if (@second_account.accounttype == &quot;Asset&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="54">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="54">
+          
           
           <code class="ruby">      if (account_2_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="55">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="55">
+          
           
           <code class="ruby">        @asset += amount.to_i</code>
         </li>
@@ -1763,32 +2135,32 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="59">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="59">
+          
           
           <code class="ruby">    elsif (@second_account.accounttype == &quot;Expense&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="60">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
           
           <code class="ruby">      if (account_2_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="61">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="61">
+          
           
           <code class="ruby">        @expense += amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="62">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="62">
+          
           
           <code class="ruby">      elsif (account_2_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="63">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="63">
+          
           
           <code class="ruby">        @expense -= amount.to_i</code>
         </li>
@@ -1799,32 +2171,32 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="65">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
           
           <code class="ruby">    elsif (@second_account.accounttype == &quot;Liability&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="66">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="66">
+          
           
           <code class="ruby">      if (account_2_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="67">
+          
           
           <code class="ruby">        @liability += amount.to_i</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
           
           <code class="ruby">      elsif (account_2_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="69">
+          
           
           <code class="ruby">        @liability -= amount.to_i</code>
         </li>
@@ -1835,20 +2207,20 @@
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="71">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="71">
+          
           
           <code class="ruby">    elsif (@second_account.accounttype == &quot;Equity&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="72">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
           
           <code class="ruby">      if (account_2_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="73">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="73">
+          
           
           <code class="ruby">        @equity += amount.to_i</code>
         </li>
@@ -1883,32 +2255,32 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="79">
-          <span class="hits">11</span>
+        <li class="missed" data-hits="0" data-linenumber="79">
+          
           
           <code class="ruby">    if ( (@asset + @expense - @liability - @equity) == 0)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="80">
-          <span class="hits">7</span>
+        <li class="missed" data-hits="0" data-linenumber="80">
+          
           
           <code class="ruby">      if (account_1_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="81">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="81">
+          
           
           <code class="ruby">        Account.find_by_id(account_1).update_attributes(:amount =&gt; (amount.to_i + @first_account.amount.to_i))</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="82">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
           
           <code class="ruby">      elsif (account_1_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="83">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="83">
+          
           
           <code class="ruby">        Account.find_by_id(account_1).update_attributes(:amount =&gt; (@first_account.amount.to_i - amount.to_i))</code>
         </li>
@@ -1925,26 +2297,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="86">
-          <span class="hits">7</span>
+        <li class="missed" data-hits="0" data-linenumber="86">
+          
           
           <code class="ruby">      if (account_2_direc == &quot;To&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="87">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="87">
+          
           
           <code class="ruby">        Account.find_by_id(account_2).update_attributes(:amount =&gt; (amount.to_i + @second_account.amount.to_i))</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="88">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="88">
+          
           
           <code class="ruby">      elsif (account_2_direc == &quot;From&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="89">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="89">
+          
           
           <code class="ruby">        Account.find_by_id(account_2).update_attributes(:amount =&gt; (@second_account.amount.to_i - amount.to_i))</code>
         </li>
@@ -1961,8 +2333,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="92">
-          <span class="hits">7</span>
+        <li class="missed" data-hits="0" data-linenumber="92">
+          
           
           <code class="ruby">      return true</code>
         </li>
@@ -1973,8 +2345,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="94">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="94">
+          
           
           <code class="ruby">      return false</code>
         </li>
@@ -2034,6 +2406,84 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="392315b72d4e9ddb15a00fe44ac7e12b7a553a74">
+  <div class="header">
+    <h3>app/models/user.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class User &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">  # Include default devise modules. Others available are:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  # :confirmable, :lockable, :timeoutable and :omniauthable</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  devise :database_authenticatable, :registerable,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">         :recoverable, :rememberable, :trackable, :validatable</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  # Setup accessible (or protected) attributes for your model</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_accessible :email, :password, :password_confirmation, :admin, :remember_me</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  # attr_accessible :title, :body</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>

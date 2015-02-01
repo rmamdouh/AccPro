@@ -31,6 +31,7 @@ class TransactionsController < ApplicationController
     @accounts.each do |account|
       @account_menu << [account.name, account.id]
     end
+    respond_with(@transaction)
   end
 
   def create

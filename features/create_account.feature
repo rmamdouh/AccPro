@@ -22,6 +22,14 @@ Background: accounts have been added to database
   And I am on the AccPro home page
 
 Scenario: create new account
+  Given a valid admin
+  When I go to the login page
+  And I fill in the following:
+    |Email|admin@admin.com|
+    |Password|12345678|
+  And I press "Log in"
+  Then I should see "Signed in successfully."
+
   When I follow "New Account"
   Then I should be on the new account page
   When I fill in the following:

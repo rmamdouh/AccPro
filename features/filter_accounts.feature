@@ -22,6 +22,14 @@ Background: accounts have been added to database
   And I am on the AccPro home page
 
 Scenario: restrict to accounts with Asset type
+  Given a valid admin
+  When I go to the login page
+  And I fill in the following:
+    |Email|admin@admin.com|
+    |Password|12345678|
+  And I press "Log in"
+  Then I should see "Signed in successfully."
+
   When I select "Asset" from "account_type"
   And I press "Filter"
   Then I should see "Cash"

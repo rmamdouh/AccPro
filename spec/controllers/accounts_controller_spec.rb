@@ -22,6 +22,8 @@ RSpec.describe AccountsController, :type => :controller do
 
   before(:each) do
     request.env["HTTP_REFERER"] = "where_i_came_from"
+    double_user = double('user')
+    double_user.stub(:admin).and_return(true)
   end
 
   # This should return the minimal set of attributes required to create a valid
@@ -44,6 +46,7 @@ RSpec.describe AccountsController, :type => :controller do
 
   describe "GET index" do
     it "assigns all accounts as @accounts" do
+      sign_in double_user
       account = Account.create! valid_attributes
       get :index, {}, valid_session
       expect(assigns(:accounts)).to eq([account])
@@ -52,6 +55,7 @@ RSpec.describe AccountsController, :type => :controller do
 
   describe "GET show" do
     it "assigns the requested account as @account" do
+      sign_in
       account = Account.create! valid_attributes
       get :show, {:id => account.to_param}, valid_session
       expect(assigns(:account)).to eq(account)
@@ -60,6 +64,7 @@ RSpec.describe AccountsController, :type => :controller do
 
   describe "GET new" do
     it "assigns a new account as @account" do
+      sign_in
       get :new, {}, valid_session
       expect(assigns(:account)).to be_a_new(Account)
     end
@@ -67,6 +72,7 @@ RSpec.describe AccountsController, :type => :controller do
 
   describe "GET edit" do
     it "assigns the requested account as @account" do
+      sign_in
       account = Account.create! valid_attributes
       get :edit, {:id => account.to_param}, valid_session
       expect(assigns(:account)).to eq(account)
@@ -76,18 +82,21 @@ RSpec.describe AccountsController, :type => :controller do
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Account" do
+        sign_in
         expect {
           post :create, {:account => valid_attributes}, valid_session
         }.to change(Account, :count).by(1)
       end
 
       it "assigns a newly created account as @account" do
+        sign_in
         post :create, {:account => valid_attributes}, valid_session
         expect(assigns(:account)).to be_a(Account)
         expect(assigns(:account)).to be_persisted
       end
 
       it "redirects to the created account" do
+        sign_in
         post :create, {:account => valid_attributes}, valid_session
         expect(response).to redirect_to(Account)
       end
@@ -95,6 +104,7 @@ RSpec.describe AccountsController, :type => :controller do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved account as @account" do
+        sign_in
         post :create, {:account => invalid_attributes}, valid_session
         expect(assigns(:account)).to be_a_new(Account)
       end
@@ -109,6 +119,7 @@ RSpec.describe AccountsController, :type => :controller do
       }
 
       it "updates the requested account" do
+        sign_in
         account = Account.create! valid_attributes
         put :update, {:id => account.to_param, :account => new_attributes}, valid_session
         account.reload
@@ -117,6 +128,7 @@ RSpec.describe AccountsController, :type => :controller do
       end
 
       it "assigns the requested account as @account" do
+        sign_in
         account = Account.create! valid_attributes
         put :update, {:id => account.to_param, :account => valid_attributes}, valid_session
         expect(assigns(:account)).to eq(account)

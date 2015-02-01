@@ -1,4 +1,5 @@
 class AccountsController < ApplicationController
+  load_and_authorize_resource
   before_filter :set_account, only: [:show, :edit, :update, :destroy]
 
   respond_to :html

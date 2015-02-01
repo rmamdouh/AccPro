@@ -30,6 +30,14 @@ module NavigationHelpers
           "Now, go and add a mapping in #{__FILE__}"
       end
 
+    when /^the login page$/
+      begin
+        user_session_path()
+      rescue NoMethodError, ArgumentError
+        raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+          "Now, go and add a mapping in #{__FILE__}"
+      end
+
     when /^the show page for "(.*)"$/
       begin
         show_movie_path(Account.find_by_title($1))
