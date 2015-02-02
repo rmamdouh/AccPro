@@ -43,44 +43,49 @@ RSpec.describe TransactionsController, :type => :controller do
   let(:valid_session) { {:first_direction => "To", :first_account_id => "1", :second_direction => "To", :second_account_id => "2", :amount => 0} }
 
   describe "GET index" do
+    login_user
     it "assigns all transactions as @transactions" do
       transaction = Transaction.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, {}
       expect(assigns(:transactions)).to eq([transaction])
     end
   end
 
   describe "GET show" do
+    login_user
     it "assigns the requested transaction as @transaction" do
       transaction = Transaction.create! valid_attributes
-      get :show, {:id => transaction.to_param}, valid_session
+      get :show, {:id => transaction.to_param}
       expect(assigns(:transaction)).to eq(transaction)
     end
   end
 
   describe "GET new" do
+    login_user
     it "assigns a new transaction as @transaction" do
-      get :new, {}, valid_session
+      get :new, {}
       expect(assigns(:transaction)).to be_a_new(Transaction)
     end
   end
 
   describe "GET edit" do
+    login_user
     it "assigns the requested transaction as @transaction" do
       transaction = Transaction.create! valid_attributes
-      get :edit, {:id => transaction.to_param}, valid_session
+      get :edit, {:id => transaction.to_param}
       expect(assigns(:transaction)).to eq(transaction)
     end
   end
 
   describe "POST create" do
+    login_user
     describe "with valid params" do
       it "creates a new Transaction" do
         account_double = double('Account')
         account_double.stub(:validate_transaction).and_return(true)
         Account.should_receive(:validate_transaction).and_return(true)
         expect {
-          post :create, {:transaction => valid_attributes}, valid_session
+          post :create, {:transaction => valid_attributes}
         }.to change(Transaction, :count).by(1)
       end
 
@@ -88,7 +93,7 @@ RSpec.describe TransactionsController, :type => :controller do
         account_double = double('Account')
         account_double.stub(:validate_transaction).and_return(true)
         Account.should_receive(:validate_transaction).and_return(true)
-        post :create, {:transaction => valid_attributes}, valid_session
+        post :create, {:transaction => valid_attributes}
         expect(assigns(:transaction)).to be_a(Transaction)
         expect(assigns(:transaction)).to be_persisted
       end
@@ -97,7 +102,7 @@ RSpec.describe TransactionsController, :type => :controller do
         account_double = double('Account')
         account_double.stub(:validate_transaction).and_return(true)
         Account.should_receive(:validate_transaction).and_return(true)
-        post :create, {:transaction => valid_attributes}, valid_session
+        post :create, {:transaction => valid_attributes}
         expect(response).to redirect_to(Transaction)
       end
 
@@ -105,7 +110,7 @@ RSpec.describe TransactionsController, :type => :controller do
         account_double = double('Account')
         account_double.stub(:validate_transaction).and_return(false)
         Account.should_receive(:validate_transaction).and_return(false)
-        post :create, {:transaction => valid_attributes}, valid_session
+        post :create, {:transaction => valid_attributes}
         expect(response).to redirect_to(:back)
       end
 
@@ -127,6 +132,7 @@ RSpec.describe TransactionsController, :type => :controller do
   end
 
   describe "PUT update" do
+    login_user
     describe "with valid params" do
       let(:new_attributes) {
         {:first_direction => "To", :first_account_id => "1", :second_direction => "To", :second_account_id => "2", :amount => 100}
@@ -134,20 +140,20 @@ RSpec.describe TransactionsController, :type => :controller do
 
       it "updates the requested transaction" do
         transaction = Transaction.create! valid_attributes
-        put :update, {:id => transaction.to_param, :transaction => new_attributes}, valid_session
+        put :update, {:id => transaction.to_param, :transaction => new_attributes}
         transaction.reload
         #skip("Add assertions for updated state")
       end
 
       it "assigns the requested transaction as @transaction" do
         transaction = Transaction.create! valid_attributes
-        put :update, {:id => transaction.to_param, :transaction => valid_attributes}, valid_session
+        put :update, {:id => transaction.to_param, :transaction => valid_attributes}
         expect(assigns(:transaction)).to eq(transaction)
       end
 
       it "redirects to the transaction" do
         transaction = Transaction.create! valid_attributes
-        put :update, {:id => transaction.to_param, :transaction => valid_attributes}, valid_session
+        put :update, {:id => transaction.to_param, :transaction => valid_attributes}
         expect(response).to redirect_to(transaction)
       end
     end
@@ -155,16 +161,17 @@ RSpec.describe TransactionsController, :type => :controller do
   end
 
   describe "DELETE destroy" do
+    login_user
     it "destroys the requested transaction" do
       transaction = Transaction.create! valid_attributes
       expect {
-        delete :destroy, {:id => transaction.to_param}, valid_session
+        delete :destroy, {:id => transaction.to_param}
       }.to change(Transaction, :count).by(-1)
     end
 
     it "redirects to the transactions list" do
       transaction = Transaction.create! valid_attributes
-      delete :destroy, {:id => transaction.to_param}, valid_session
+      delete :destroy, {:id => transaction.to_param}
       expect(response).to redirect_to(transactions_url)
     end
   end

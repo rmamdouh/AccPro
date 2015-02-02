@@ -22,8 +22,6 @@ RSpec.describe AccountsController, :type => :controller do
 
   before(:each) do
     request.env["HTTP_REFERER"] = "where_i_came_from"
-    double_user = double('user')
-    double_user.stub(:admin).and_return(true)
   end
 
   # This should return the minimal set of attributes required to create a valid
@@ -45,128 +43,128 @@ RSpec.describe AccountsController, :type => :controller do
   let(:valid_session) { {:name => "Account", :accounttype => "Asset", :amount => 0} }
 
   describe "GET index" do
+    login_user
     it "assigns all accounts as @accounts" do
-      sign_in double_user
       account = Account.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, {}
       expect(assigns(:accounts)).to eq([account])
     end
   end
 
   describe "GET show" do
+    login_user
     it "assigns the requested account as @account" do
-      sign_in
       account = Account.create! valid_attributes
-      get :show, {:id => account.to_param}, valid_session
+      get :show, {:id => account.to_param}
       expect(assigns(:account)).to eq(account)
     end
   end
 
   describe "GET new" do
+    login_user
     it "assigns a new account as @account" do
-      sign_in
-      get :new, {}, valid_session
+      get :new, {}
       expect(assigns(:account)).to be_a_new(Account)
     end
   end
 
   describe "GET edit" do
+    login_user
     it "assigns the requested account as @account" do
-      sign_in
       account = Account.create! valid_attributes
-      get :edit, {:id => account.to_param}, valid_session
+      get :edit, {:id => account.to_param}
       expect(assigns(:account)).to eq(account)
     end
   end
 
   describe "POST create" do
+    login_user
     describe "with valid params" do
       it "creates a new Account" do
-        sign_in
+        subject.current_user.should_not be_nil
         expect {
-          post :create, {:account => valid_attributes}, valid_session
+          post :create, {:account => valid_attributes}
         }.to change(Account, :count).by(1)
       end
 
       it "assigns a newly created account as @account" do
-        sign_in
-        post :create, {:account => valid_attributes}, valid_session
+        post :create, {:account => valid_attributes}
         expect(assigns(:account)).to be_a(Account)
         expect(assigns(:account)).to be_persisted
       end
 
       it "redirects to the created account" do
-        sign_in
-        post :create, {:account => valid_attributes}, valid_session
+        post :create, {:account => valid_attributes}
         expect(response).to redirect_to(Account)
       end
     end
+  end
 
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved account as @account" do
-        sign_in
-        post :create, {:account => invalid_attributes}, valid_session
-        expect(assigns(:account)).to be_a_new(Account)
-      end
+  describe "with invalid params" do
+    login_user
+    it "assigns a newly created but unsaved account as @account" do
+      post :create, {:account => invalid_attributes}
+      expect(assigns(:account)).to be_a_new(Account)
     end
   end
 
   describe "PUT update" do
     describe "with valid params" do
+      login_user
       let(:new_attributes) {
         #skip("Add a hash of attributes valid for your model")
         {:name => "New", :accounttype => "Equity", :amount => 0}
       }
 
       it "updates the requested account" do
-        sign_in
         account = Account.create! valid_attributes
-        put :update, {:id => account.to_param, :account => new_attributes}, valid_session
+        put :update, {:id => account.to_param, :account => new_attributes}
         account.reload
         #skip("Add assertions for updated state")
         expect(assigns(:account)).to eq(account)
       end
 
       it "assigns the requested account as @account" do
-        sign_in
         account = Account.create! valid_attributes
-        put :update, {:id => account.to_param, :account => valid_attributes}, valid_session
+        put :update, {:id => account.to_param, :account => valid_attributes}
         expect(assigns(:account)).to eq(account)
       end
 
       it "redirects to the account" do
         account = Account.create! valid_attributes
-        put :update, {:id => account.to_param, :account => valid_attributes}, valid_session
+        put :update, {:id => account.to_param, :account => valid_attributes}
         expect(response).to redirect_to(account)
       end
     end
 
     describe "with invalid params" do
+      login_user
       it "assigns the account as @account" do
         account = Account.create! valid_attributes
-        put :update, {:id => account.to_param, :account => invalid_attributes}, valid_session
+        put :update, {:id => account.to_param, :account => invalid_attributes}
         expect(assigns(:account)).to eq(account)
       end
 
       it "re-renders the 'edit' template" do
         account = Account.create! valid_attributes
-        put :update, {:id => account.to_param, :account => invalid_attributes}, valid_session
+        put :update, {:id => account.to_param, :account => invalid_attributes}
         expect(response).to render_template("edit")
       end
     end
   end
 
   describe "DELETE destroy" do
+    login_user
     it "destroys the requested account" do
       account = Account.create! valid_attributes
       expect {
-        delete :destroy, {:id => account.to_param}, valid_session
+        delete :destroy, {:id => account.to_param}
       }.to change(Account, :count).by(-1)
     end
 
     it "redirects to the accounts list" do
       account = Account.create! valid_attributes
-      delete :destroy, {:id => account.to_param}, valid_session
+      delete :destroy, {:id => account.to_param}
       expect(response).to redirect_to(accounts_url)
     end
   end
